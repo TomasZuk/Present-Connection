@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <header><img src="images/header.jpg" alt="">
+  </header>
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="Male"> Male
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="Female"> Female
+
+  <button class="addRow btn btn-primary" data-toggle="modal" data-target="#newRowModal">Add new row</button>
+
+  <div class="modal fade" id="newRowModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add new row the table</h4>
+        </div>
+        <div class="modal-body">
+
+          <form id="newRowForm">
+            <div class="form-group">
+              <input class="form-control rowNumber" type="number" min="0" oninput="validity.valid||(value='');" value="" name="row_number" placeholder="Row number">
+            </div>
+            <div id="rowParameters">
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" id="addNewRow" class="pull-left btn btn-primary">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <table class="table" id="result">
+  </table>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/academy-table-filter.js"></script>
+  <script src="scripts/academy-table.js"></script>
+  <!-- <script src="scripts/academy-ajax-data.js"></script> -->
+  <script src="scripts/academy-events.js"></script>
+  <script src="scripts/academy-create-new-row.js"></script>
+</body>
+
+</html>

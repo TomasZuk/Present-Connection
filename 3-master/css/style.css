@@ -1,0 +1,18 @@
+body
+{
+    margin:0;
+}
+
+img
+{
+    width:100%;
+}
+
+table, tr, th, td {
+    border: 1px black solid;
+    text-align: center;
+}
+
+.addRow {
+  margin: 5px;
+}
