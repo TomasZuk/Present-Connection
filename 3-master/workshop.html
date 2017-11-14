@@ -13,6 +13,7 @@
 <body>
   <header><img src="images/header.jpg" alt="">
   </header>
+  <div id="messages"></div>
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="Male"> Male
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="Female"> Female
 
@@ -25,21 +26,21 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Add new row the table</h4>
+          <h4 class="modal-title">Add new row to the table</h4>
         </div>
         <div class="modal-body">
 
           <form id="newRowForm">
             <div class="form-group">
-              <input class="form-control rowNumber" type="number" min="0" oninput="validity.valid||(value='');" value="" name="row_number" placeholder="Row number">
+              <input class="form-control rowNumber" type="number" min="0" oninput="validity.valid||(value='');" value="" name="row_number" placeholder="Row number" required>
             </div>
             <div id="rowParameters">
             </div>
+            <button type="submit" id="addNewRow" data-toggle="modal" data-target="#newRowModal" class="pull-left btn btn-primary">Save</button>
           </form>
 
         </div>
         <div class="modal-footer">
-          <button type="submit" id="addNewRow" class="pull-left btn btn-primary">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -56,7 +57,8 @@
   <script src="scripts/academy-table.js"></script>
   <!-- <script src="scripts/academy-ajax-data.js"></script> -->
   <script src="scripts/academy-events.js"></script>
-  <script src="scripts/academy-create-new-row.js"></script>
+  <!-- <script src="scripts/academy-create-new-row.js"></script> -->
+  <script src="scripts/academy-new-row-class.js"></script>
 </body>
 
 </html>

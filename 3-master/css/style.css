@@ -16,3 +16,7 @@ table, tr, th, td {
 .addRow {
   margin: 5px;
 }
+
+#addNewRow {
+  margin-top: 5%;
+}

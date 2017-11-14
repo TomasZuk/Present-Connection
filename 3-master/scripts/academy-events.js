@@ -2,18 +2,20 @@
 let table = new Table(data, "result");
 table.drawTable();
 
-document.querySelectorAll("input[name='inlineRadioOptions']").forEach((radio)=>{
 
-    radio.addEventListener("change", (event) =>
-    {
-        let filter = new TableFilter("gender", event.target.value, "eq");
-        table.filter(filter);
-    });
-});
+// =========================== Filter
 
-$('.addRow').on('click', function(){
+// document.querySelectorAll("input[name='inlineRadioOptions']").forEach((radio)=>{
+//
+//     radio.addEventListener("change", (event) =>
+//     {
+//         let filter = new TableFilter("gender", event.target.value, "eq");
+//         table.filter(filter);
+//     });
+// });
 
-});
+// ======================= Ajax row fadeOut
+
 // $(document).ajaxComplete(function () {
 //   $('tr').on("click", function() {
 //   $(this).fadeOut();
@@ -25,3 +27,17 @@ $('.addRow').on('click', function(){
 //   });
 // });
 //
+
+// ============================ add new rowData
+$('.addRow').on('click', function() {
+  let row = new NewRow("rowParameters", "rowNumber");
+  row.setParamRows();
+});
+
+$('#addNewRow').on('click', function(event) {
+  event.preventDefault();
+  let row = new NewRow("rowParameters", "rowNumber");
+  row.drawNewRow();
+  row.clearModal();
+  row.successMessage();
+});
