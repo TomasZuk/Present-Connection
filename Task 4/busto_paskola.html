@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <title>Busto paskola</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./greitoji_paskola.html">Greitoji paskola</a></li>
+          <li class="nav-item"><a class="nav-link" href="./busto_paskola.html">Busto paskola</a></li>
+          <li class="nav-item"><a class="nav-link" href="./vartojamoji_paskola.html">Vartojamoji paskola</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <form id="homeloan" class="form">
+        <div class="form-group row">
+          <label for="loan" class="col-sm-5 col-form-label col-form-label-lg"><h3>Paskola</h3></label>
+          <div class="col-sm-2">
+            <input type="number" name="loan" class="form-control" >
+          </div>
+          <div class="col-sd-1">€</div>
+        </div>
+        <div class="form-group row">
+          <label for="deadline" class="col-sm-5 col-form-label col-form-label-lg"><h3>Paskolos atidavimo terminas</h3></label>
+          <div class="col-sm-3">
+            <input type="date" name="deadline" class="form-control" >
+          </div>
+        </div>
+        <submit class="btn btn-primary">Skaičiuoti</submit>
+      </form>
+    </div>
+  </body>
+  <script src="js/calculate.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</html>
